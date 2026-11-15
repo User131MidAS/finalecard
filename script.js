@@ -8,10 +8,10 @@ const pattern = [
 	[0, 0, 0, 1, 0, 0, 0],
 ];
 
-const numberAnswer = [ 4, 42];
+const numberAnswer = [ 4, 44, 42];
 const passcodeAnswer = [4, 12345678];
 const cardPasswords = ["alexisasiamark", "ravenasiamark", "password", "again", "4"];
-const secretWord = "gratitude";
+const secretWords = ["gratitude", "4"];
 
 const libraryAddress = {
 	hex: "the longest comment in the source code. (dont include the <!-- and -->, just the text in between)",
@@ -124,6 +124,7 @@ function showLibraryPuzzle() {
 		document.getElementById("aPage").textContent = libraryAddress.page;
 		document.getElementById("p2").classList.add("hidden");
 		document.getElementById("p3").classList.remove("hidden");
+		document.getElementById("babelContainer").classList.remove("hidden");
 	} else {
 		message.textContent = "That number is not correct. Try again.";
 		message.className = "msg bad";
@@ -134,7 +135,7 @@ function unlockMessage() {
 	const word = document.getElementById("word").value.trim().toLowerCase();
 	const message = document.getElementById("msg2");
 
-	if (word === secretWord) {
+	if (secretWords.includes(word)) {
 		document.getElementById("puzzle").classList.add("hidden");
 		document.getElementById("message").classList.remove("hidden");
 	} else {
