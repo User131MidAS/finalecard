@@ -104,14 +104,30 @@ y3gq5p637mk32z53k2euclmk9oiuj -->
                 <div id="msg1" class="msg"></div>
               </div>
 
+              <section id="golPanel" class="panel gol-embed" aria-labelledby="golTitle">
+                <h2 id="golTitle">Game of Life Simulator</h2>
+                <p>Tap a cell to toggle it. Drag to move around the board; use the controls to play, pause, step, or randomize.</p>
+                <div id="golViewport" class="gol-viewport">
+                  <canvas id="golCanvas" width="400" height="400" aria-label="Interactive Conway's Game of Life grid. Click a cell to toggle it."></canvas>
+                </div>
+                <div class="gol-controls">
+                  <button id="toggleGolBtn" type="button" aria-pressed="false">Play</button>
+                  <button id="stepGolBtn" type="button">Step</button>
+                  <button id="randomizeGolBtn" type="button">Randomize</button>
+                  <button id="resetGolBtn" type="button">Reset</button>
+                </div>
+                <div class="gol-controls gol-zoom-controls" aria-label="Simulator zoom controls">
+                  <button id="zoomOutGolBtn" type="button" aria-label="Zoom out">−</button>
+                  <span id="golZoomLevel">200%</span>
+                  <button id="zoomInGolBtn" type="button" aria-label="Zoom in">+</button>
+                </div>
+                <p class="gol-generation">Generation: <span id="golGeneration">0</span></p>
+                <div id="golStatus" class="msg" role="status" aria-live="polite">Paused — draw a pattern, then press Play.</div>
+              </section>
+
               <!-- PUZZLE 2 - Meme puzzle (btw all the passwords are 4) -->
               <div id="p2" class="panel hidden">
                 <h2>Puzzle 2 · The Passcode</h2>
-                <div class="gol-embed">
-                  <h3>Conway's Game of Life</h3>
-                  <canvas id="golCanvas" width="400" height="400" aria-label="Animated Conway's Game of Life"></canvas>
-                  <button id="randomizeGolBtn" type="button">Randomize</button>
-                </div>
                 <p>
 					Enter the passcode to continue to the Library of Babel puzzle. 
 					<b>(You can google it)</b>

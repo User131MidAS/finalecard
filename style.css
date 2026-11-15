@@ -52,13 +52,73 @@ main {
 	font-size: 1rem;
 }
 
+.gol-embed p {
+	margin: 0 0 8px;
+}
+
+.gol-viewport {
+	position: relative;
+	width: min(100%, 400px);
+	aspect-ratio: 1;
+	margin: 0 auto 8px;
+	overflow: auto;
+	touch-action: none;
+	user-select: none;
+}
+
 #golCanvas {
+	position: absolute;
+	top: 0;
+	left: 0;
 	display: block;
 	width: min(100%, 400px);
 	height: auto;
-	margin: 0 auto 8px;
-	border: 1px solid #ccc;
-	background: #111;
+	border: 2px solid #e34e5e;
+	background: #4eb4a4;
+	cursor: grab;
+	touch-action: none;
+}
+
+.gol-viewport.dragging #golCanvas {
+	cursor: grabbing;
+}
+
+.gol-controls {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 8px;
+}
+
+.gol-controls button {
+	min-height: 44px;
+}
+
+.gol-zoom-controls {
+	align-items: center;
+	margin-top: 8px;
+}
+
+.gol-zoom-controls button {
+	min-width: 40px;
+	font-size: 1.2rem;
+}
+
+#golZoomLevel {
+	min-width: 4ch;
+	font-family: monospace;
+}
+
+.gol-generation {
+	margin: 8px 0 0;
+	font-family: monospace;
+	font-weight: 700;
+}
+
+#golStatus {
+	min-height: 1.5em;
+	margin: 4px 0 0;
+	font-size: 0.9rem;
 }
 
 #passwordGate {
