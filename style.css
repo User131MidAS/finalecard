@@ -42,6 +42,25 @@ main {
 	font-size: 1.2rem;
 }
 
+.gol-embed {
+	margin: 12px 0 18px;
+	text-align: center;
+}
+
+.gol-embed h3 {
+	margin: 0 0 8px;
+	font-size: 1rem;
+}
+
+#golCanvas {
+	display: block;
+	width: min(100%, 400px);
+	height: auto;
+	margin: 0 auto 8px;
+	border: 1px solid #ccc;
+	background: #111;
+}
+
 #passwordGate {
 	max-width: 480px;
 	margin: 0 auto 16px;
