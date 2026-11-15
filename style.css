@@ -175,7 +175,7 @@ input {
 }
 
 input::placeholder {
-	color: rgba(243, 243, 243, 0.514);
+	color: rgba(243, 243, 243, 0.181);
 	opacity: 1;
 }
 
