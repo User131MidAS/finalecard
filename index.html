@@ -61,7 +61,7 @@ y3gq5p637mk32z53k2euclmk9oiuj -->
 
       <button id="toggleBtn" type="button" aria-expanded="false">Open</button>
       <div id="videoHintArrow" class="hidden" aria-hidden="true">↓</div>
-      <p id="hintNote" class="hidden"><b>there is a button leading to 3 puzzles and 1 true output, find it!</b></p>
+      <p id="hintNote" class="hidden"><b>there is a secret button hidden in the front of the card leading to a secret message, find it!</b></p>
 
       <div id="card" class="card">
 
@@ -72,9 +72,9 @@ y3gq5p637mk32z53k2euclmk9oiuj -->
             <h2 id="passwordTitle">Password Is Required!</h2>
             <h5 class="small">(enter their first names, all lowercase, and no spaces)</h5>
             <p class="psswrdHnt"><b>Riddles w First Names of students in BSIT 2C;</b>
-				<br>- someone who bares the name of a <b>bird.</b>
-				<br>- someone who holds the name of a <b>continent.</b>
-				<br>- someone who has the same <b> name as a zodiac sign.</b>
+				<br><b>-</b> someone who bares the name of a <b>bird.</b>
+				<br><b>-</b> someone who holds the name of a <b>continent.</b>
+				<br><b>-</b> someone who has the same <b> name as a zodiac sign.</b>
 			</p>
             <b><label for="passwordInput">Password</label></b><br>
             <input id="passwordInput" type="text" placeholder="ravenasiamark">
@@ -91,94 +91,64 @@ y3gq5p637mk32z53k2euclmk9oiuj -->
 
               <!-- PUZZLE 1 - Conway's Game of Life answer: 44. but its actually 42 according to science(/4o1oJ66byyA) -->
               <div id="p1" class="panel">
-                <h2>Puzzle 1 · Conway's Game of Life</h2>
-                <p><b>To complete the first puzzle</b> you have to go to <b>
-					<a href="https://playgameoflife.com" target="_blank" rel="noopener">playgameoflife.com</a>
-					</b>, and copy <b>the pattern</b> of this heart, 
-					<b>the heart is generation 0.</b> run exactly <b>
-						31 generations. Enter the 2 numbers you see. (zoom out)</b>
-				</p>
-                <div id="board" class="board"></div>   <!-- JavaScript makes the board thing -->
+                <h2>Puzzle 1 · Simulation</h2>
+                <p>
+                  <b>To complete this puzzle you have to simulate the following and add them all:</b><br>
+                  <br>
+                  <b>1.</b>
+                  <br>function multiply(a, b) {<br>
+                  return a * b;<br>
+                  }<br>
+                  console.log(multiply(4, 5));<br>
+                  <br>
+                  <b>2.</b><br>
+                  let number = 20;<br>
+                  number = 14;<br>
+                  console.log(number);<br>
+                  <br>
+                  <b>3.</b>
+                  <br>const square = number => number;<br>
+                  console.log(square(10));<br> <!-- mislead the user to thinking it is squared -->
+                  <br>
+                </p>
                 <input id="answer" type="number" placeholder="4">
                 <button id="checkBtn">Check</button>
                 <div id="msg1" class="msg"></div>
               </div>
 
-              <section id="golPanel" class="panel gol-embed" aria-labelledby="golTitle">
-                <h2 id="golTitle">Game of Life Simulator</h2>
-                <p>Tap a cell to toggle it. Drag to move around the board; use the controls to play, pause, step, or randomize.</p>
-                <div id="golViewport" class="gol-viewport">
-                  <canvas id="golCanvas" width="400" height="400" aria-label="Interactive Conway's Game of Life grid. Click a cell to toggle it."></canvas>
-                </div>
-                <div class="gol-controls">
-                  <button id="toggleGolBtn" type="button" aria-pressed="false">Play</button>
-                  <button id="stepGolBtn" type="button">Step</button>
-                  <button id="randomizeGolBtn" type="button">Randomize</button>
-                  <button id="resetGolBtn" type="button">Reset</button>
-                </div>
-                <div class="gol-controls gol-zoom-controls" aria-label="Simulator zoom controls">
-                  <button id="zoomOutGolBtn" type="button" aria-label="Zoom out">−</button>
-                  <span id="golZoomLevel">200%</span>
-                  <button id="zoomInGolBtn" type="button" aria-label="Zoom in">+</button>
-                </div>
-                <p class="gol-generation">Generation: <span id="golGeneration">0</span></p>
-                <div id="golStatus" class="msg" role="status" aria-live="polite">Paused — draw a pattern, then press Play.</div>
-              </section>
-
               <!-- PUZZLE 2 - Meme puzzle (btw all the passwords are 4) -->
               <div id="p2" class="panel hidden">
                 <h2>Puzzle 2 · The Passcode</h2>
                 <p>
-					Enter the passcode to continue to the Library of Babel puzzle. 
-					<b>(You can google it)</b>
-				</p>
-				<p>
-					<i>"after a catastrophic cybersecurity blunder involving eMudhra, 
-					an Indian Certificate Authority (CA). A faulty key-generation 
-					script accidentally created extremely weak private keys (values 
-					under 256) for eight intermediate certificates, with one private 
-					key literally set to the number "_" instead of a massive, random 
-					cryptographic string. Major browsers (including Google Chrome, 
-					Mozilla Firefox, and Microsoft Edge) rapidly revoked trust and 
-					blocked the affected certificates, and eMudhra's stock crashed 
-					by 20%."</i>
-				</p>
-                <p>
-					<b>Hint:</b> It's a <b><i>single digit number</i>
-					</b>
-				</p>
+					        Solve the riddles and combine them. (All lowercased)<!-- misleading direction -->
+                </p>
+                  <p>
+                    <i>
+                      "and although angelo Wanted a simplE but easy puzzle <br>
+                      he cant but Worry for the uSers to complain tHat <br>
+                      is was too easy, And so he hid the puzzle pieces <br>
+                      in plain sight for the useRs to see and hoPing that <br>
+                      EverY user can somEhow solve and find the paSscode."
+                      <br><b>- Angelo</b>
+                    </i>
+                  </p>
                 <input id="num2" type="number" placeholder="4">
-                <button id="mapBtn">Continue</button>
-                <div id="msg3" class="msg"></div>
+                <button id="checkPasscodeBtn">Continue</button>
+                <div id="passcodeMessage" class="msg"></div>
+              </div>
+
+              <div id="p3" class="panel hidden">
+                <h2>Puzzle 3 · The Hole</h2>
+                <p>
+                  The more you take away from me, the bigger I get.
+                  What am I?
+                </p>
+                <input id="riddleAnswer" type="text" placeholder="Your answer" autocomplete="off">
+                <button id="checkRiddleBtn">Check</button>
+                <div id="riddleMessage" class="msg" role="status" aria-live="polite"></div>
               </div>
             </div>
 
-            <!-- PUZZLE 3 - THE LIBRARY (/4zDXLnbP_z0) -->
-            <div id="p3" class="panel lock hidden">
-              <h2>Puzzle 3 · The Library of Babel</h2>
-              <p><b>Go to <a href="https://libraryofbabel.info" target="_blank" rel="noopener">libraryofbabel.info</a></b>,
-                click <b>Browse</b>, and enter <b>the address below.</b> If done right, you should find <b><i>the secret word.</i></b></p>
-              <ul>
-                <b><li>Hex Name: </b><span id="aHex"></span></li>
-                <b><li>Wall: </b><span id="aWall"></span></li>
-                <b><li>Shelf: </b><span id="aShelf"></span></li>
-                <b><li>Volume: </b><span id="aVolume"></span></li>
-                <b><li>Page: </b><span id="aPage"></span></li>
-              </ul>
-              <p><i>You must first find the <b>Hex Name!</b></i></p>
-				<p><b>hint:</b> you should <b><i>inspect</i></b> the<b><i> head</i></b> of the problem...</p>
-              <input id="word" type="text" placeholder="secret word">
-              <button id="unlockBtn">Unlock</button>
-              <div id="msg2" class="msg"></div>
-            </div>
-            <div id="babelContainer" class="babel-container hidden">
-				THE LIBRARY OF BABEL
-              <iframe
-                class="babel-frame"
-                src="https://libraryofbabel.info/"
-                title="Library of Babel"
-                loading="lazy"></iframe>
-            </div>
           </div>
 
           <!-- THE HIDDEN MESSAGE (shown after unlocking, hoping no one gets spoilers) -->
@@ -194,8 +164,14 @@ y3gq5p637mk32z53k2euclmk9oiuj -->
 
         <!-- ===== THE COVER (the first thing i should see) ===== -->
         <div id="cover" class="cover">
-          <h2>My E-Card</h2>
-          <p><b>·Angelo Lloyds Joseph S. Santiago·<br>· ITWS02 ·</b></p>
+          <i>
+            <h2>· My E-Card ·</h2>
+            <p>
+              <b>·Angelo Lloyds Joseph S. Santiago·
+                <br>· ITWS02 ·
+              </b>
+            </p>
+          </i>
           <div id="coverArt" class="board"></div>
         </div>
         <button id="secretTrigger" type="button" aria-label="Reveal puzzles" title="A hidden button"></button>
