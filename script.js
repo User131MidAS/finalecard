@@ -11,7 +11,7 @@ const pattern = [
 
 const numberAnswer = [ 4, 44, 42];
 const passcodeAnswer = [4, 12345678];
-const cardPasswords = ["alexisasiamark", "ravenasiamark", "password", "again", "4"];
+const cardPasswords = ["alexisasiaaries", "ravenasiaaries", "password", "again", "4", "12345678", "123456789", "1234567890"];
 const secretWords = ["gratitude", "4"];
 
 const libraryAddress = {
